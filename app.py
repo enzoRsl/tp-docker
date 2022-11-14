@@ -71,4 +71,4 @@ def api_delete(id):
 
 
 if __name__ == '__main__':
-    app.run(host="0.0.0.0", port=os.getenv(""))
+    app.run(host="0.0.0.0", port=os.getenv("PORT_TP"))
