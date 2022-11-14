@@ -69,6 +69,14 @@ def api_delete(id):
             books.remove(book)
     return "Success: Book information has been deleted."
 
+@app.route("/api/v1/books/<id>", methods=["GET"])
+def api_get(id):
+    id = int(id)
+    if id != 1 and id != 2:
+        return "Error: ID not found"
+    return jsonify(books[id])
+
+
 
 if __name__ == '__main__':
     app.run(host="0.0.0.0", port=os.getenv("PORT_TP"))
